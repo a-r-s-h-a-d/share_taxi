@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sharetaxi_driver"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="30" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/d2"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Set_new_password"></activity>
+        <activity android:name=".Forgot_password" />
+
+        <service android:name=".LocationService" />
+
+        <activity
+            android:name=".IPSETTING"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".HOME"
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name=".View_notification"
+            android:label="@string/title_activity_view_notification" />
+        <activity
+            android:name=".Register"
+            android:label="@string/title_activity_register" />
+        <activity
+            android:name=".Notif_details"
+            android:label="@string/title_activity_notif_details" />
+        <activity
+            android:name=".ROUTE_VIEW"
+            android:label="@string/title_activity_route__view" />
+        <activity
+            android:name=".PAYMENT"
+            android:label="@string/title_activity_payment" />
+        <activity
+            android:name=".Vehicle"
+            android:label="@string/title_activity_vehicle" />
+        <activity
+            android:name=".VEHICLELIST"
+            android:label="@string/title_activity_vehiclelist" />
+        <activity
+            android:name=".RATINGS"
+            android:label="@string/title_activity_ratings" />
+        <activity
+            android:name=".PICKUP"
+            android:label="@string/title_activity_pickup" />
+        <activity
+            android:name=".DROP"
+            android:label="@string/title_activity_drop" />
+        <activity
+            android:name=".Sharedreq"
+            android:label="@string/title_activity_sharedreq" />
+        <activity
+            android:name=".ACCEPT_REJECT_sharereq"
+            android:label="@string/title_activity_accept__reject_sharereq" />
+    </application>
+
+</manifest>

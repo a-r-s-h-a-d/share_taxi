@@ -1,0 +1,74 @@
+{% include 'adminheader.html' %}
+<div id='page-wrapper'>
+	<div id='page-inner'>
+		<div class='row'>
+			<div class='col-md-12'>
+				<h1>Driver Details</h1>
+				<div class='form'>
+				</div>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-md-12'>
+				<table class='table'>
+					<thead>
+						<tr>
+							<th>Sl No.</th>
+							<th>Full Name</th>
+							<th>Address</th>
+							<th>Gender</th>
+							<th>Email</th>
+							<th>Date of Birth</th>
+							<th>Contact Number</th>
+							<th>Lisence Number</th>
+							<th>Exp.</th>
+							<th>Date of Joining</th>
+							<th>Photo</th>
+							<th>Status</th>
+							<th>Approve</th>
+							<th>Reject</th>
+							
+						</tr>
+					</thead>
+					<tbody>
+						{% for row in data['driver'] %}
+						<tr>
+							<td>{{loop.index}}</td>
+							<td>{{row['driver_fname']}}<br>{{row['driver_lname']}}</td>
+							<td>{{row['driver_hname']}}<br>{{row['driver_city']}}<br>Pin : {{row['driver_pincode']}}</td>
+							<td>{{row['driver_gender']}}</td>
+							<td>{{row['driver_email']}}</td>
+							<td>{{row['driver_dob']}}</td>
+							<td>{{row['driver_phn']}}</td>
+							<td>{{row['driver_lisence']}}</td>
+							<td>{{row['driver_exp']}}</td>
+							<td>{{row['driver_doj']}}</td>
+							<td><img src="/{{row['driver_photo']}}" width="100px" height="100px"></td>
+							{% if row['driver_status']=="Pending" %}
+							<td style="color: red;font-style:bold">{{row['driver_status']}}</td>
+							{%elif row['driver_status']=="Active"%}
+							<td><img src="/static/icon/Accept.png" width="40px" height="40px"></td>
+							{%else%}
+							<td><img src="/static/icon/reject.png" width="40px" height="40px"></td>
+							{%endif%}
+							<td>
+								<a href="?action=approve&id={{row['driver_id']}}" onclick="return confirm('Do you want to approve ?')">Approve
+								</a>
+							</td>
+							
+							<td>
+								<a href="?action=reject&id={{row['driver_id']}}" onclick="return confirm('Do you want to reject ?')">Reject
+								</a>
+							</td>
+							
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% include 'adminfooter.html' %}

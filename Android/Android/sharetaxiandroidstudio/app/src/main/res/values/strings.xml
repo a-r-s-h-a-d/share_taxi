@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GO TAXI</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_registration">Registration</string>
+    <string name="title_activity_send__request">SEND_REQUEST</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_request__status">REQUEST_STATUS</string>
+    <string name="title_activity_trackdriver">TRACKDRIVER</string>
+    <string name="title_activity_requestdetails">REQUESTDETAILS</string>
+    <string name="title_activity_advancepay">Advancepay</string>
+    <string name="title_activity_notif_details">Notif_details</string>
+    <string name="title_activity_feedback">Feedback</string>
+    <string name="title_activity_complaint">Complaint</string>
+    <string name="title_activity_add_rating">Add_rating</string>
+    <string name="title_activity_rate">RATE</string>
+    <string name="title_activity_share_home">Share_home</string>
+    <string name="title_activity_sharetoothers">Sharetoothers</string>
+    <string name="title_activity_view_shared">View_shared</string>
+    <string name="title_activity_share__req__sent">SHARE_REQ_SENT</string>
+
+</resources>

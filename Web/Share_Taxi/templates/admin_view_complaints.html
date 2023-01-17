@@ -1,0 +1,68 @@
+{% include 'adminheader.html' %}
+	
+	<div id='page-wrapper'>
+	<div id='page-inner'>
+		<div class='row'>
+			<div class='col-md-12'>
+				<h1>View Complaints</h1>
+				<div class='form'>
+				</div>
+			</div>
+		</div>
+		<form method="post">
+		<div class='row'>
+			<div class='col-md-12'>
+				<table class='table'>
+					<thead>
+						<tr>
+							<th>Sl No.</th>
+							<th>Date</th>
+							<th>Rider Name</th>
+							<th>Complaint</th>
+							<th>Reply</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for row in data['view_complaints'] %}
+						<tr>
+							<td>{{loop.index}}</td>
+							<td>{{row['date']}}</td>
+							<td>{{row['ride_fname']}} {{row['rider_lname']}}</td>
+							<td>{{row['complaint']}}</td>
+
+							<td>
+								{%if row['status']=="pending"%}
+								<a href="?action=sendreply&comid={{row
+								['complaint_id']}}">Send Reply</a>
+								{%else%}
+								{{row['reply']}}
+								{%endif%}
+							</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+				<br>
+				{%if data['sendreply']%}
+				<div class='form'>
+					<form method="post"><br>
+						<div class='form-group'>
+							<label><b>Reply</b></label>
+							<br>
+							<textarea class='form-control' placeholder='Reply' name="reply" required=""></textarea>
+						
+						</div>
+				
+						<div class='form-group'>
+							<input type='submit' class='btn btn-success' required name='sendreply' value='Send'>
+						</div>
+					</form>
+				</div>
+				{%endif%}
+			</div>
+		</div>
+		</form>
+	</div>
+</div>
+
+{% include 'adminfooter.html' %}

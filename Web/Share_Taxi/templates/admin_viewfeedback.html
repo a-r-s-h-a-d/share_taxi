@@ -1,0 +1,44 @@
+{% include 'adminheader.html' %}
+	
+	<div id='page-wrapper'>
+	<div id='page-inner'>
+		<div class='row'>
+			<div class='col-md-12'>
+				<h1>View Feedback</h1>
+				<div class='form'>
+				</div>
+			</div>
+		</div>
+		<form method="post">
+		<div class='row'>
+			<div class='col-md-12'>
+				<table class='table'>
+					<thead>
+						<tr>
+							<th>Sl No.</th>
+							<th>Date</th>
+							<th>Time</th>
+							<th>Rider Name</th>
+							<th>Feedback</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for row in data['view_feedbacks'] %}
+						<tr>
+							<td>{{loop.index}}</td>
+							<td>{{row['date']}}</td>
+							<td>{{row['time']}}</td>
+							<td>{{row['ride_fname']}} {{row['rider_lname']}}</td>
+							<td>{{row['feedback']}}</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+				
+			</div>
+		</div>
+		</form>
+	</div>
+</div>
+
+{% include 'adminfooter.html' %}

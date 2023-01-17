@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GO TAXI DRIVER</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_home">HOME</string>
+    <string name="title_activity_view_notification">View_notification</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_notif_details">Notif_details</string>
+    <string name="title_activity_route__view">ROUTE_VIEW</string>
+    <string name="title_activity_payment">PAYMENT</string>
+    <string name="title_activity_vehicle">Vehicle</string>
+    <string name="title_activity_vehiclelist">VEHICLELIST</string>
+    <string name="title_activity_ratings">RATINGS</string>
+    <string name="title_activity_pickup">PICKUP</string>
+    <string name="title_activity_drop">DROP</string>
+    <string name="title_activity_sharedreq">Sharedreq</string>
+    <string name="title_activity_accept__reject_sharereq">ACCEPT_REJECT_sharereq</string>
+
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sharetaxi"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="30" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/d"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Set_new_password"></activity>
+        <activity android:name=".Forgot_password" />
+        <activity
+            android:name=".IPSETTINGS"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".LocationService" />
+
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".Registration"
+            android:label="@string/title_activity_registration" />
+        <activity
+            android:name=".SEND_REQUEST"
+            android:label="@string/title_activity_send__request" />
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name=".REQUEST_STATUS"
+            android:label="@string/title_activity_request__status" />
+        <activity
+            android:name=".TRACKDRIVER"
+            android:label="@string/title_activity_trackdriver" />
+        <activity
+            android:name=".REQUESTDETAILS"
+            android:label="@string/title_activity_requestdetails" />
+        <activity
+            android:name=".Advancepay"
+            android:label="@string/title_activity_advancepay" />
+        <activity
+            android:name=".Notif_details"
+            android:label="@string/title_activity_notif_details" />
+        <activity
+            android:name=".Feedback"
+            android:label="@string/title_activity_feedback" />
+        <activity
+            android:name=".Complaint"
+            android:label="@string/title_activity_complaint" />
+        <activity
+            android:name=".Add_rating"
+            android:label="@string/title_activity_add_rating" />
+        <activity
+            android:name=".RATE"
+            android:label="@string/title_activity_rate" />
+        <activity
+            android:name=".Share_home"
+            android:label="@string/title_activity_share_home" />
+        <activity
+            android:name=".Sharetoothers"
+            android:label="@string/title_activity_sharetoothers" />
+        <activity
+            android:name=".View_shared"
+            android:label="@string/title_activity_view_shared" />
+        <activity
+            android:name=".SHARE_REQ_SENT"
+            android:label="@string/title_activity_share__req__sent" />
+    </application>
+
+</manifest>
